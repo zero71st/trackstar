@@ -50,13 +50,13 @@ class ProjectController extends Controller {
     public function actionView($id) {
         //ดึง Issue ที่เกี่ยวข้องกับ Project นี้
         $issueDataProvider = new CActiveDataProvider('Issue', array(
-            $criteria => array(
+            'criteria' => array(
                 'condition' => 'project_id=:projectId',
                 'params' => array(':projectId' => $this->loadModel($id)->id),
             ),
             'pagination' => array(
                 'pageSize' => 1,
-                ),
+            ),
         ));
 
         $this->render('view', array(
@@ -171,3 +171,4 @@ class ProjectController extends Controller {
     }
 
 }
+

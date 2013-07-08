@@ -20,8 +20,7 @@ class IssueController extends Controller {
             // projectContext คือ filter method ใน class นี้
             // + คืออนุญาตให้ใช้ได้กับ Action Create ส่วน - คือไม่อนุญาตให้ใชักับ Action ใด ๆ
             // create คือ Action method ใน Class นี้
-            'projectContext+create', //check to ensure valid context
-                // - คือไม่อนุญาตให้ใช้กับ Action ที่ระบุ
+            'projectContext + create index admin', //check to ensure valid context
         );
     }
 
@@ -121,7 +120,13 @@ class IssueController extends Controller {
      * Lists all models.
      */
     public function actionIndex() {
-        $dataProvider = new CActiveDataProvider('Issue');
+        $dataProvider = new CActiveDataProvider('Issue', array(
+        'criteria' => array(
+            'condition' => 'project_id=:protectId',
+            'params' => array(':projectId' => $this->_project->id),
+        ),
+        ));
+        
         $this->render('index', array(
             'dataProvider' => $dataProvider,
         ));
@@ -168,17 +173,17 @@ class IssueController extends Controller {
 
     // Custom Method
     public function filterProjectContext($filterChain) {
-        
+
         if (isset($_GET['pid'])) {
-            $this->loadProejct($_GET['pid']);
-        }else{
-            throw new CHttpException(404,'กรุณาระบุโครงการที่ต้องการก่อน!');
+            $this->loadProject($_GET['pid']);
+        } else {
+            throw new CHttpException(404, 'กรุณาระบุโครงการที่ต้องการก่อน!');
         }
-        
+
         $filterChain->run();
     }
 
-    protected function loadProejct($projectId) {
+    protected function loadProject($projectId) {
         if ($this->_project === null) {
             $this->_project = Project::model()->findByPk($projectId);
         }

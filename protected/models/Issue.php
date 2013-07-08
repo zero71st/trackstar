@@ -110,12 +110,11 @@ class Issue extends CActiveRecord {
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
 
-        $criteria = new CDbCriteria;
+       $criteria = new CDbCriteria;
 
         $criteria->compare('id', $this->id);
         $criteria->compare('name', $this->name, true);
         $criteria->compare('description', $this->description, true);
-        $criteria->compare('project_id', $this->project_id);
         $criteria->compare('type_id', $this->type_id);
         $criteria->compare('status_id', $this->status_id);
         $criteria->compare('owner_id', $this->owner_id);
@@ -124,7 +123,12 @@ class Issue extends CActiveRecord {
         $criteria->compare('create_user_id', $this->create_user_id);
         $criteria->compare('update_time', $this->update_time, true);
         $criteria->compare('udpate_user_id', $this->udpate_user_id);
-
+        
+        //สร้างเพิ่ม
+        $criteria->condition-'project_id=:projectId';
+        $criteria->params=array(':projectId'=>$this->project_id);
+        //
+        
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));

@@ -35,9 +35,11 @@ $this->widget('zii.widgets.CDetailView', array(
 ?>
 
 <br/>
-<h1>Proejct Issue</h1>
+<h1>Project Issue</h1>
 
-<?php 
-    $this->widget('zii.widgets.CListView',array('dataProvider'=>$issueDataProvider,'itemView'=>'/issue/_view',
-    ));
+<?php
+$this->widget('zii.widgets.CListView', array(
+    'dataProvider' => $issueDataProvider,
+    'itemView' => '/issue/_view',
+));
 ?>

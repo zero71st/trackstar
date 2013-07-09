@@ -15,7 +15,7 @@
 
 	<?php echo $form->errorSummary($model); ?>
 
-	<div class="row">
+        <div class="row">
 		<?php echo $form->labelEx($model,'username'); ?>
 		<?php echo $form->textField($model,'username',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'username'); ?>
@@ -32,6 +32,13 @@
 		<?php echo $form->passwordField($model,'password',array('size'=>60,'maxlength'=>255)); ?>
 		<?php echo $form->error($model,'password'); ?>
 	</div>
+        
+        <!--เพิ่ม Confirm password-->
+        <div class="row">
+                <?php echo $form->labelEx($model,'password_repeat'); ?>
+                <?php echo $form->passwordField($model,'password_repeat',array('size'=>60,'maxlength'=>255)); ?>
+                <?php echo $form->error($model,'password_repeat'); ?>
+        </div>
 
 	<div class="row buttons">
 		<?php echo CHtml::submitButton($model->isNewRecord ? 'Create' : 'Save'); ?>

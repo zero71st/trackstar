@@ -20,6 +20,7 @@
  * @property Project[] $tblProjects
  */
 class User extends TrackStarActiveRecord {
+    public $password_repeat;
 
     /**
      * Returns the static model of the specified AR class.
@@ -43,10 +44,16 @@ class User extends TrackStarActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
+        
         // ลบ Rule create_time,update_time,create_user,update_user,last_logine เพราะอัพเดตให้อัตโนมัติไม่ต้อง Validate
         return array(
             array('username, email, password', 'required'),
             array('username, email, password', 'length', 'max' => 255),
+            // เพิ่ม Rule 
+            array('email,username','unique'),
+            array('email','email'),
+            array('password','compare'), // ทำงานรวมกับ $password_repeat
+            array('email,username,password,password_repeat','required'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on' => 'search'),
@@ -106,6 +113,18 @@ class User extends TrackStarActiveRecord {
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
+    }
+    
+    // HashPassword จะต้องทำทีหลังจากการ Validate
+    // overide afterValidate()
+    public function afterValidate(){
+        parent::afterValidate();
+        if(!$this->hasErrors())
+           $this->password = $this->hashPassword($this->password);
+    }
+    
+    public function hashPassword($password){
+        return md5($password);
     }
 
 }

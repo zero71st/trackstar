@@ -9,7 +9,7 @@
 abstract class TrackStarActiveRecord extends CActiveRecord {
 
     protected function beforeSave() {
-        //เขียนแบบนี้อ่านยากน่าจะมี {} หลัก if
+        //เขียนแบบนี้อ่านยากน่าจะมี {} หลัง if
         if (null !== Yii::app()->User)
             $id = Yii::app()->user->id;
         else
@@ -18,7 +18,7 @@ abstract class TrackStarActiveRecord extends CActiveRecord {
         // เขียนแบบนี้อ่านยาก เพราะไม่มี {}
         if ($this->isNewRecord)
             $this->create_user_id = $id;
-            $this->udpate_user_id = $id;
+            $this->update_user_id = $id;
             return parent::beforeSave();
     }
 

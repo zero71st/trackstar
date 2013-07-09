@@ -12,7 +12,7 @@
  * @property string $update_time
  * @property integer $update_user_id
  */
-class Project extends CActiveRecord {
+class Project extends TrackStarActiveRecord {
 
     /**
      * Returns the static model of the specified AR class.
@@ -36,11 +36,11 @@ class Project extends CActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
+        
+// ลบ Rule create_time,update_time,create_user,update_user,last_logine เพราะอัพเดตให้อัตโนมัติไม่ต้อง Validate
         return array(
             array('name, description', 'required'),
-            array('create_user_id, update_user_id', 'numerical', 'integerOnly' => true),
             array('name', 'length', 'max' => 255),
-            array('create_time, update_time', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, name, description, create_time, create_user_id, update_time, update_user_id', 'safe', 'on' => 'search'),
@@ -55,8 +55,8 @@ class Project extends CActiveRecord {
             'issues' => array(self::HAS_MANY, 'Issue', 'project_id'),
             'users' => array(self::MANY_MANY, 'User', 'tbl_project_user_assignment(project_id, user_id)'),
         );
-         //สัมพันธ์กับ Issue โดยแบบ 1 project ต่อหลาย Issue
-         //สัมพันธ์กับ User โดย 1 Project สามารถมีหลาย User โดยตารางที่เชื่อความสัมพันธ์คือ tbl_project_user_assignment
+        //สัมพันธ์กับ Issue โดยแบบ 1 project ต่อหลาย Issue
+        //สัมพันธ์กับ User โดย 1 Project สามารถมีหลาย User โดยตารางที่เชื่อความสัมพันธ์คือ tbl_project_user_assignment
     }
 
     /**
@@ -100,6 +100,7 @@ class Project extends CActiveRecord {
     public function getUsersOptions() {
         // งงแทบตายที่แท้ก็ลืม Generate Class User ทำให้ดึงข้อมูลไม่ได้
         $usersArray = CHtml::listData($this->users, 'id', 'username');
-        return $usersArray; 
-   }
+        return $usersArray;
+    }
+
 }

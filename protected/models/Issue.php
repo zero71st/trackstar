@@ -22,7 +22,7 @@
  * @property User $owner
  * @property Project $project
  */
-class Issue extends CActiveRecord {
+class Issue extends TrackStarActiveRecord {
     //Type Constants
 
     const TYPE_BUG = 0;
@@ -58,12 +58,13 @@ class Issue extends CActiveRecord {
         // will receive user inputs.
         return array(
             array('name', 'required'),
-            array('project_id, type_id, status_id, owner_id, requester_id, create_user_id, udpate_user_id', 'numerical', 'integerOnly' => true),
+            array('project_id, type_id, status_id, owner_id, requester_id,', 'numerical', 'integerOnly' => true),
             array('name', 'length', 'max' => 255),
-            array('description, create_time, update_time', 'safe'),
+            array('description', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, name, description, project_id, type_id, status_id, owner_id, requester_id, create_time, create_user_id, update_time, udpate_user_id', 'safe', 'on' => 'search'),
+            
             // สร้างใหม่เพื่อ Validate ค่าที่ป้อนเพราะอะไรไม่รู้
             array('type_id', 'in', 'range' => self::getAllowedTypeRange())
         );
@@ -98,7 +99,7 @@ class Issue extends CActiveRecord {
             'create_time' => 'Create Time',
             'create_user_id' => 'Create User',
             'update_time' => 'Update Time',
-            'udpate_user_id' => 'Udpate User',
+            'update_user_id' => 'Update User',
         );
     }
 
@@ -110,7 +111,7 @@ class Issue extends CActiveRecord {
         // Warning: Please modify the following code to remove attributes that
         // should not be searched.
 
-       $criteria = new CDbCriteria;
+        $criteria = new CDbCriteria;
 
         $criteria->compare('id', $this->id);
         $criteria->compare('name', $this->name, true);
@@ -122,13 +123,13 @@ class Issue extends CActiveRecord {
         $criteria->compare('create_time', $this->create_time, true);
         $criteria->compare('create_user_id', $this->create_user_id);
         $criteria->compare('update_time', $this->update_time, true);
-        $criteria->compare('udpate_user_id', $this->udpate_user_id);
-        
+        $criteria->compare('update_user_id', $this->update_user_id);
+
         //สร้างเพิ่ม
-        $criteria->condition='project_id=:projectId';
-        $criteria->params=array(':projectId'=>$this->project_id);
+        $criteria->condition = 'project_id=:projectId';
+        $criteria->params = array(':projectId' => $this->project_id);
         //
-        
+
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,
         ));
@@ -158,17 +159,18 @@ class Issue extends CActiveRecord {
             self::TYPE_TASK
         );
     }
-    
+
     // คืนค่าของสาถานะ
-    public function getStatusText(){
+    public function getStatusText() {
         // statusOptions มาจาก GetStatusOption สามารถลดรูปให้เหลือ statusOptions เฉย ๆ ได้
         $statusOptions = $this->statusOptions; //คือไร
-        return isset($statusOptions[$this->status_id]) ? $statusOptions[$this->status_id]:"ไม่มีสถานะนี้ ({$this->status_id})";
-    } 
-    
-    // คืนค่าข้องความของประเภท 
-    public function getTypeText(){
-        $typeOptions = $this->typeOptions;
-       return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id]: "ไม่พบประเภทปัญหาที่ระบุ({$this->type_id})";
+        return isset($statusOptions[$this->status_id]) ? $statusOptions[$this->status_id] : "ไม่มีสถานะนี้ ({$this->status_id})";
     }
+
+    // คืนค่าข้องความของประเภท 
+    public function getTypeText() {
+        $typeOptions = $this->typeOptions;
+        return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id] : "ไม่พบประเภทปัญหาที่ระบุ({$this->type_id})";
+    }
+
 }

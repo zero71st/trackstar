@@ -47,8 +47,8 @@
 	</div>
 
 	<div class="row">
-		<?php echo $form->label($model,'udpate_user_id'); ?>
-		<?php echo $form->textField($model,'udpate_user_id'); ?>
+		<?php echo $form->label($model,'update_user_id'); ?>
+		<?php echo $form->textField($model,'update_user_id'); ?>
 	</div>
 
 	<div class="row buttons">

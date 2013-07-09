@@ -38,8 +38,8 @@
 	<?php echo CHtml::encode($data->update_time); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('udpate_user_id')); ?>:</b>
-	<?php echo CHtml::encode($data->udpate_user_id); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('update_user_id')); ?>:</b>
+	<?php echo CHtml::encode($data->update_user_id); ?>
 	<br />
 
 	*/ ?>

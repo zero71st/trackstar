@@ -29,6 +29,6 @@ $this->menu=array(
 		'create_time',
 		'create_user_id',
 		'update_time',
-		'udpate_user_id',
+		'update_user_id',
 	),
 )); ?>

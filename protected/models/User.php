@@ -12,7 +12,7 @@
  * @property string $create_time
  * @property integer $create_user_id
  * @property string $update_time
- * @property integer $udpate_user_id
+ * @property integer $update_user_id
  *
  * The followings are the available model relations:
  * @property Issue[] $issues
@@ -43,14 +43,13 @@ class User extends TrackStarActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
+        // ลบ Rule create_time,update_time,create_user,update_user,last_logine เพราะอัพเดตให้อัตโนมัติไม่ต้อง Validate
         return array(
             array('username, email, password', 'required'),
-            array('create_user_id, udpate_user_id', 'numerical', 'integerOnly' => true),
             array('username, email, password', 'length', 'max' => 255),
-            array('last_login_time, create_time, update_time', 'safe'),
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
-            array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, udpate_user_id', 'safe', 'on' => 'search'),
+            array('id, username, email, password, last_login_time, create_time, create_user_id, update_time, update_user_id', 'safe', 'on' => 'search'),
         );
     }
 
@@ -80,7 +79,7 @@ class User extends TrackStarActiveRecord {
             'create_time' => 'Create Time',
             'create_user_id' => 'Create User',
             'update_time' => 'Update Time',
-            'udpate_user_id' => 'Udpate User',
+            'update_user_id' => 'Update User',
         );
     }
 
@@ -102,7 +101,7 @@ class User extends TrackStarActiveRecord {
         $criteria->compare('create_time', $this->create_time, true);
         $criteria->compare('create_user_id', $this->create_user_id);
         $criteria->compare('update_time', $this->update_time, true);
-        $criteria->compare('udpate_user_id', $this->udpate_user_id);
+        $criteria->compare('update_user_id', $this->update_user_id);
 
         return new CActiveDataProvider($this, array(
             'criteria' => $criteria,

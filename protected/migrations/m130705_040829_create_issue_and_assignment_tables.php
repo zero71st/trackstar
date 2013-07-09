@@ -15,7 +15,7 @@ class m130705_040829_create_issue_and_assignment_tables extends CDbMigration {
             'create_time' => 'datetime DEFAULT NULL',
             'create_user_id' => 'int(11) DEFAULT NULL',
             'update_time' => 'datetime DEFAULT NULL',
-            'udpate_user_id' => 'int(11) DEFAULT NULL',
+            'update_user_id' => 'int(11) DEFAULT NULL',
                 ), 'ENGINE=InnoDB');
 
         //Create the user table            
@@ -28,7 +28,7 @@ class m130705_040829_create_issue_and_assignment_tables extends CDbMigration {
             'create_time' => 'datetime DEFAULT NULL',
             'create_user_id' => 'int(11) DEFAULT NULL',
             'update_time' => 'datetime DEFAULT NULL',
-            'udpate_user_id' => 'int(11) DEFAULT NULL',
+            'update_user_id' => 'int(11) DEFAULT NULL',
                 ), 'ENGINE=InnoDB');
 
         //Create the assignment table that allows many to many relationship between projects and users

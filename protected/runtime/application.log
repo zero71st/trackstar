@@ -1871,3 +1871,554 @@ Stack trace:
 #22 {main}
 REQUEST_URI=/trackstar/index.php?r=issue/view&id=1
 ---
+2013/07/09 06:58:29 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "view?id=1".' in C:\xampp\htdocs\yiiroot\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CController.php(270): CController->missingAction('view?id=1')
+#1 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view?id=1')
+#2 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view?id...')
+#3 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view?id=1
+---
+2013/07/09 06:59:42 [error] [exception.CException] exception 'CException' with message 'Property "Issue.proejct" is not defined.' in C:\xampp\htdocs\yiiroot\framework\base\CComponent.php:130
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(143): CComponent->__get('proejct')
+#1 C:\xampp\htdocs\trackstar\protected\views\issue\view.php(12): CActiveRecord->__get('proejct')
+#2 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#3 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#5 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#6 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(59): CController->render('view', Array)
+#7 [internal function]: IssueController->actionView('3')
+#8 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/view')
+#20 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#21 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/view&id=3
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/create&pid=1
+---
+2013/07/09 07:53:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:180
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=3
+---
+2013/07/09 07:57:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:180
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+---
+2013/07/09 07:58:13 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId.
+in C:\xampp\htdocs\trackstar\protected\views\issue\index.php (20)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (132)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (183)
+2013/07/09 07:58:13 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\trackstar\protected\views\issue\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(132): CController->render('index', Array)
+#16 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): IssueController->actionIndex()
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(183): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#29 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#30 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=2
+---
+2013/07/09 09:06:02 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:180
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=2
+---
+2013/07/09 09:07:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "index.php".' in C:\xampp\htdocs\yiiroot\framework\web\CController.php:483
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CController.php(270): CController->missingAction('index.php')
+#1 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index.php')
+#2 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/index.p...')
+#3 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#4 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/trackstar/index.php?r=project/index.php
+---
+2013/07/09 09:11:58 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId.
+in C:\xampp\htdocs\trackstar\protected\views\issue\index.php (20)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (132)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (183)
+2013/07/09 09:11:58 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\trackstar\protected\views\issue\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(132): CController->render('index', Array)
+#16 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): IssueController->actionIndex()
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(183): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#29 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#30 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=4
+---
+2013/07/09 09:14:32 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId.
+in C:\xampp\htdocs\trackstar\protected\views\issue\index.php (20)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (132)
+in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php (183)
+2013/07/09 09:14:32 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\trackstar\protected\views\issue\index.php(20): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('index', Array, true)
+#15 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(132): CController->render('index', Array)
+#16 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): IssueController->actionIndex()
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#18 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#19 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(183): CFilterChain->run()
+#20 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#21 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#22 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#23 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#24 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#26 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#27 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#28 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#29 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#30 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#31 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#32 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index&pid=1
+---
+2013/07/09 09:35:15 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/view&id=1
+---
+2013/07/09 09:37:11 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in C:\xampp\htdocs\yiiroot\framework\web\CController.php:336
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view
+---
+2013/07/09 09:37:33 [error] [system.db.CDbCommand] CDbCommand::fetchColumn() failed: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId.
+in C:\xampp\htdocs\trackstar\protected\views\project\view.php (45)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (65)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/09 09:37:33 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY093]: Invalid parameter number: parameter was not defined. The SQL statement executed was: SELECT COUNT(*) FROM `tbl_issue` `t` WHERE project_id=:protectId' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:541
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(432): CDbCommand->queryInternal('fetchColumn', 0, Array)
+#1 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(1546): CDbCommand->queryScalar()
+#2 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(179): CActiveRecord->count(Object(CDbCriteria))
+#3 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(224): CActiveDataProvider->calculateTotalItemCount()
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(129): CDataProvider->getTotalItemCount()
+#5 C:\xampp\htdocs\yiiroot\framework\web\CDataProvider.php(168): CActiveDataProvider->fetchData()
+#6 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CBaseListView.php(107): CDataProvider->getData()
+#7 C:\xampp\htdocs\yiiroot\framework\zii\widgets\CListView.php(203): CBaseListView->init()
+#8 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(147): CListView->init()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(172): CBaseController->createWidget('zii.widgets.CLi...', Array)
+#10 C:\xampp\htdocs\trackstar\protected\views\project\view.php(45): CBaseController->widget('zii.widgets.CLi...', Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#15 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(65): CController->render('view', Array)
+#16 [internal function]: ProjectController->actionView('1')
+#17 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#18 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#20 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#21 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#22 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#23 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#24 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#25 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#26 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#27 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#28 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view')
+#29 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#30 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#31 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/index
+---
+2013/07/09 09:42:24 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2013/07/09 09:48:40 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin&pid=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=2
+---
+2013/07/09 09:50:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=1
+---
+2013/07/09 09:50:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=1
+---
+2013/07/09 09:55:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2013/07/09 09:55:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=1
+---
+2013/07/09 09:56:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=1
+---
+2013/07/09 09:58:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=2
+---
+2013/07/09 10:00:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/admin')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/index&pid=2
+---
+2013/07/09 10:00:32 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:183
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/admin&pid=2
+---
+2013/07/09 10:36:44 [error] [exception.CException] exception 'CException' with message 'Alias "zii.behaviors.CTimestampBehaviors" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yiiroot\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\YiiBase.php(196): YiiBase::import('zii.behaviors.C...', true)
+#1 C:\xampp\htdocs\yiiroot\framework\base\CComponent.php(326): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiroot\framework\base\CComponent.php(297): CComponent->attachBehavior('CTimestampBehav...', Array)
+#3 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(388): CComponent->attachBehaviors(Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(74): CActiveRecord::model('User')
+#5 C:\xampp\htdocs\trackstar\protected\controllers\UserController.php(125): CActiveDataProvider->__construct('User')
+#6 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#17 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/trackstar/index.php?r=user
+---
+2013/07/09 10:39:26 [error] [exception.CException] exception 'CException' with message 'Alias "zii.behaviors.CTimestampBehaviors" is invalid. Make sure it points to an existing PHP file and the file is readable.' in C:\xampp\htdocs\yiiroot\framework\YiiBase.php:316
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\YiiBase.php(196): YiiBase::import('zii.behaviors.C...', true)
+#1 C:\xampp\htdocs\yiiroot\framework\base\CComponent.php(326): YiiBase::createComponent(Array)
+#2 C:\xampp\htdocs\yiiroot\framework\base\CComponent.php(297): CComponent->attachBehavior('CTimestampBehav...', Array)
+#3 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(388): CComponent->attachBehaviors(Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CActiveDataProvider.php(74): CActiveRecord::model('User')
+#5 C:\xampp\htdocs\trackstar\protected\controllers\UserController.php(125): CActiveDataProvider->__construct('User')
+#6 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): UserController->actionIndex()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#9 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('')
+#16 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('user')
+#17 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#19 {main}
+REQUEST_URI=/trackstar/index.php?r=user
+---
+2013/07/09 11:43:14 [error] [exception.CException] exception 'CException' with message 'Property "User.update_user_id" is not defined.' in C:\xampp\htdocs\yiiroot\framework\base\CComponent.php:173
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(159): CComponent->__set('update_user_id', 'admin')
+#1 C:\xampp\htdocs\trackstar\protected\models\TrackStarActiveRecord.php(21): CActiveRecord->__set('update_user_id', 'admin')
+#2 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(1017): TrackStarActiveRecord->beforeSave()
+#3 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(795): CActiveRecord->insert(NULL)
+#4 C:\xampp\htdocs\trackstar\protected\controllers\UserController.php(73): CActiveRecord->save()
+#5 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(49): UserController->actionCreate()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('create')
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('user/create')
+#16 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/trackstar/index.php?r=user/create
+HTTP_REFERER=http://localhost/trackstar/index.php?r=user/create
+---

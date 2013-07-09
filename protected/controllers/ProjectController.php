@@ -55,7 +55,7 @@ class ProjectController extends Controller {
                 'params' => array(':projectId' => $this->loadModel($id)->id),
             ),
             'pagination' => array(
-                'pageSize' => 1,
+                'pageSize' => 2,
             ),
         ));
 

@@ -125,7 +125,7 @@ class Issue extends CActiveRecord {
         $criteria->compare('udpate_user_id', $this->udpate_user_id);
         
         //สร้างเพิ่ม
-        $criteria->condition-'project_id=:projectId';
+        $criteria->condition='project_id=:projectId';
         $criteria->params=array(':projectId'=>$this->project_id);
         //
         

@@ -102,5 +102,21 @@ class Project extends TrackStarActiveRecord {
         $usersArray = CHtml::listData($this->users, 'id', 'username');
         return $usersArray;
     }
-
+    
+    public function assignUser($userId,$role){
+        $command = Yii::app()->db->createCommand();
+        $command->insert('tbl_project_user_assignment',array(
+            'role'=>$role,
+            'user_id'=>$userId,
+            'project_id'=>$this->id,
+        ));
+    }
+    
+    public function removeUser($userId){
+        $command = Yii::app()->db->createCommand();
+        $commad->delete('tbl_project_user_assignment',array(
+            'user_id=:userId AND project_id=:projectId',
+            array(':userId'=>$userId,':projectId'=>$this->id),
+        ));
+    }
 }

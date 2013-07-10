@@ -2756,3 +2756,156 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=user/delete&id=3
 HTTP_REFERER=http://localhost/trackstar/index.php?r=user/view&id=3
 ---
+2013/07/10 09:08:42 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table 'db_trackstar.#sql-e10_53' (errno: 150). The SQL statement executed was: ALTER TABLE `tbl_auth_item_child` ADD CONSTRAINT `fk_auth_item_child_parent` FOREIGN KEY (`parent`) REFERENCES `tbl-auth_item_child` (`name`) ON DELETE CASCADE ON UPDATE CASCADE.
+2013/07/10 09:08:42 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1005 Can't create table 'db_trackstar.#sql-e10_53' (errno: 150). The SQL statement executed was: ALTER TABLE `tbl_auth_item_child` ADD CONSTRAINT `fk_auth_item_child_parent` FOREIGN KEY (`parent`) REFERENCES `tbl-auth_item_child` (`name`) ON DELETE CASCADE ON UPDATE CASCADE' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1432): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(343): CDbCommand->addForeignKey('fk_auth_item_ch...', 'tbl_auth_item_c...', 'parent', 'tbl-auth_item_c...', 'name', 'CASCADE', 'CASCADE')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(25): CDbMigration->addForeignKey('fk_auth_item_ch...', 'tbl_auth_item_c...', 'parent', 'tbl-auth_item_c...', 'name', 'CASCADE', 'CASCADE')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:09:28 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_auth_item' already exists. The SQL statement executed was: CREATE TABLE `tbl_auth_item` (
+	`name` varchar(64) NOT NULL,
+	`type` Integer NOT NULL,
+	`description` Text,
+	`bizrule` Text,
+	`data` Text,
+	PRIMARY KEY(name)
+) ENGINE=InnoDB.
+2013/07/10 09:09:28 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'tbl_auth_item' already exists. The SQL statement executed was: CREATE TABLE `tbl_auth_item` (
+	`name` varchar(64) NOT NULL,
+	`type` Integer NOT NULL,
+	`description` Text,
+	`bizrule` Text,
+	`data` Text,
+	PRIMARY KEY(name)
+) ENGINE=InnoDB' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(228): CDbCommand->createTable('tbl_auth_item', Array, 'ENGINE=InnoDB')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(15): CDbMigration->createTable('tbl_auth_item', Array, 'ENGINE=InnoDB')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:11:05 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[HY000]: General error: 1005 Can't create table 'db_trackstar.#sql-e10_55' (errno: 150). The SQL statement executed was: ALTER TABLE `tbl_auth_item_child` ADD CONSTRAINT `fk_auth_item_child_parent` FOREIGN KEY (`parent`) REFERENCES `tbl_auth_item_child` (`name`) ON DELETE CASCADE ON UPDATE CASCADE.
+2013/07/10 09:11:05 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[HY000]: General error: 1005 Can't create table 'db_trackstar.#sql-e10_55' (errno: 150). The SQL statement executed was: ALTER TABLE `tbl_auth_item_child` ADD CONSTRAINT `fk_auth_item_child_parent` FOREIGN KEY (`parent`) REFERENCES `tbl_auth_item_child` (`name`) ON DELETE CASCADE ON UPDATE CASCADE' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1432): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(343): CDbCommand->addForeignKey('fk_auth_item_ch...', 'tbl_auth_item_c...', 'parent', 'tbl_auth_item_c...', 'name', 'CASCADE', 'CASCADE')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(25): CDbMigration->addForeignKey('fk_auth_item_ch...', 'tbl_auth_item_c...', 'parent', 'tbl_auth_item_c...', 'name', 'CASCADE', 'CASCADE')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:14:36 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CADCADE' at line 1. The SQL statement executed was: ALTER TABLE `tbl_auth_assignment` ADD CONSTRAINT `fk_auth_assignment_user` FOREIGN KEY (`userid`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE CADCADE.
+2013/07/10 09:14:36 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CADCADE' at line 1. The SQL statement executed was: ALTER TABLE `tbl_auth_assignment` ADD CONSTRAINT `fk_auth_assignment_user` FOREIGN KEY (`userid`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE CADCADE' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1432): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(343): CDbCommand->addForeignKey('fk_auth_assignm...', 'tbl_auth_assign...', 'userid', 'tbl_user', 'id', 'CASCADE', 'CADCADE')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(43): CDbMigration->addForeignKey('fk_auth_assignm...', 'tbl_auth_assign...', 'userid', 'tbl_user', 'id', 'CASCADE', 'CADCADE')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:21:46 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'userid' doesn't exist in table. The SQL statement executed was: CREATE TABLE `tbl_auth_assignment` (
+	`itemname` varchar(64) NOT NULL,
+	`user_id` int(11) NOT NULL,
+	`bizrule` text,
+	`data` text,
+	PRIMARY KEY(itemname,userid)
+) ENGINE=InnoDB.
+2013/07/10 09:21:46 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1072 Key column 'userid' doesn't exist in table. The SQL statement executed was: CREATE TABLE `tbl_auth_assignment` (
+	`itemname` varchar(64) NOT NULL,
+	`user_id` int(11) NOT NULL,
+	`bizrule` text,
+	`data` text,
+	PRIMARY KEY(itemname,userid)
+) ENGINE=InnoDB' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1321): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(228): CDbCommand->createTable('tbl_auth_assign...', Array, 'ENGINE=InnoDB')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(37): CDbMigration->createTable('tbl_auth_assign...', Array, 'ENGINE=InnoDB')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:24:00 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CADCADE' at line 1. The SQL statement executed was: ALTER TABLE `tbl_auth_assignment` ADD CONSTRAINT `fk_auth_assignment_userid` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE CADCADE.
+2013/07/10 09:24:00 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'CADCADE' at line 1. The SQL statement executed was: ALTER TABLE `tbl_auth_assignment` ADD CONSTRAINT `fk_auth_assignment_userid` FOREIGN KEY (`user_id`) REFERENCES `tbl_user` (`id`) ON DELETE CASCADE ON UPDATE CADCADE' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php(1432): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\db\CDbMigration.php(343): CDbCommand->addForeignKey('fk_auth_assignm...', 'tbl_auth_assign...', 'user_id', 'tbl_user', 'id', 'CASCADE', 'CADCADE')
+#2 C:\xampp\htdocs\trackstar\protected\migrations\m130710_055925_create_rbac_tables.php(43): CDbMigration->addForeignKey('fk_auth_assignm...', 'tbl_auth_assign...', 'user_id', 'tbl_user', 'id', 'CASCADE', 'CADCADE')
+#3 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(385): m130710_055925_create_rbac_tables->up()
+#4 C:\xampp\htdocs\yiiroot\framework\cli\commands\MigrateCommand.php(109): MigrateCommand->migrateUp('m130710_055925_...')
+#5 [internal function]: MigrateCommand->actionUp(Array)
+#6 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommand.php(172): ReflectionMethod->invokeArgs(Object(MigrateCommand), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\console\CConsoleCommandRunner.php(67): CConsoleCommand->run(Array)
+#8 C:\xampp\htdocs\yiiroot\framework\console\CConsoleApplication.php(91): CConsoleCommandRunner->run(Array)
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CConsoleApplication->processRequest()
+#10 C:\xampp\htdocs\yiiroot\framework\yiic.php(33): CApplication->run()
+#11 C:\xampp\htdocs\trackstar\protected\yiic.php(7): require_once('C:\xampp\htdocs...')
+#12 {main}
+---
+2013/07/10 09:39:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "proejct/create".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('proejct/create')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=proejct/create
+---
+2013/07/10 09:40:39 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'You are not authorized to perform this action.' in C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php:179
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\auth\CAccessControlFilter.php(142): CAccessControlFilter->accessDenied(Object(CWebUser), 'You are not aut...')
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(38): CAccessControlFilter->preFilter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#3 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('admin')
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/admin')
+#9 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#10 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#11 {main}
+REQUEST_URI=/trackstar/index.php?r=project/admin
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---

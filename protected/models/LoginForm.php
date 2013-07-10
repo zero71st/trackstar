@@ -6,7 +6,7 @@
  * user login form data. It is used by the 'login' action of 'SiteController'.
  */
 class LoginForm extends CFormModel {
-
+    
     public $username;
     public $password;
     public $rememberMe;

@@ -117,7 +117,9 @@ class User extends TrackStarActiveRecord {
 
     // HashPassword จะต้องทำทีหลังจากการ Validate
     // overide afterValidate()
-    public function afterValidate() {
+
+   // เข้ารหัส Password เพื่อไปเก็บใน Database
+    public function afterValidate() { 
         parent::afterValidate();
         if (!$this->hasErrors())
             $this->password = $this->hashPassword($this->password);
@@ -126,7 +128,8 @@ class User extends TrackStarActiveRecord {
     public function hashPassword($password) {
         return md5($password);
     }
-
+    
+    // ถอดรหัส Password เมื่อ Login
     public function validatePassword($password) {
         return $this->hashPassword($password) === $this->password;
     }

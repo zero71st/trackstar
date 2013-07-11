@@ -23,7 +23,6 @@ class ProjectController extends Controller {
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
      */
-    
     public function actionView($id) {
         //ดึง Issue ที่เกี่ยวข้องกับ Project นี้
         $issueDataProvider = new CActiveDataProvider('Issue', array(
@@ -145,6 +144,28 @@ class ProjectController extends Controller {
             echo CActiveForm::validate($model);
             Yii::app()->end();
         }
+    }
+
+    public function actionAdduser($id) {
+        $project = $this->loadModel($id);
+        if (!Yii::app()->user->checkAccess('createUser', array('project' => $project))) {
+            throw new CHttpException(403, "คุณไม่ได้รับอนูญาติให้ดำเนินการสิ่งนี้");
+        }
+        $form = new ProjectUserForm();
+        if (isset($_POST['ProjectUserForm'])) {
+            $form->attributes = $_POST['ProjectUserForm']; // Key $_POST ผิดทำให้ Run ไม่ได้
+            $form->project = $project;
+            // Validate User Input
+            if ($form->validate()) {
+                if ($form->assign()) {
+                    Yii::app()->user->setFlash('success', $form->username . " ถูกเพิ่มเข้าในโครงการแล้ว");
+                    $form->unsetAttributes();
+                    $form->clearErrors();
+                }
+            }
+        }
+        $form->project = $project;
+        $this->render('adduser', array('model' => $form,));
     }
 
 }

@@ -31,7 +31,7 @@ class m130710_085319_create_rbac_tables extends CDbMigration {
             'itemname' => 'varchar(64) NOT NULL',
             'userid' => 'int(11) NOT NULL',
             'bizrule' => 'Text',
-            'data' => 'Text',
+            'data' => 'Text',           
             'PRIMARY KEY(itemname,userid)',
                 ), 'ENGINE=InnoDB');
 

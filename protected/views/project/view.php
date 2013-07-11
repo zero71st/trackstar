@@ -14,6 +14,8 @@ $this->menu = array(
     array('label' => 'Delete Project', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm' => 'Are you sure you want to delete this item?')),
     array('label' => 'Manage Project', 'url' => array('admin')),
     array('label' => 'Create Issue', 'url' => array('issue/create', 'pid' => $model->id)),
+    array('label' => 'Add user to Project','url'=>array('project/adduser','id'=>$model->id)),
+    
 );
 ?>
 

@@ -36,7 +36,6 @@ class Project extends TrackStarActiveRecord {
     public function rules() {
         // NOTE: you should only define rules for those attributes that
         // will receive user inputs.
-        
 // ลบ Rule create_time,update_time,create_user,update_user,last_logine เพราะอัพเดตให้อัตโนมัติไม่ต้อง Validate
         return array(
             array('name, description', 'required'),
@@ -102,21 +101,43 @@ class Project extends TrackStarActiveRecord {
         $usersArray = CHtml::listData($this->users, 'id', 'username');
         return $usersArray;
     }
-    
-    public function assignUser($userId,$role){
+
+    public function assignUser($userId, $role) {
         $command = Yii::app()->db->createCommand();
-        $command->insert('tbl_project_user_assignment',array(
-            'role'=>$role,
-            'user_id'=>$userId,
-            'project_id'=>$this->id,
+        $command->insert('tbl_project_user_assignment', array(
+            'role' => $role,
+            'user_id' => $userId,
+            'project_id' => $this->id,
         ));
     }
-    
-    public function removeUser($userId){
+
+    public function removeUser($userId) {
         $command = Yii::app()->db->createCommand();
-        $commad->delete('tbl_project_user_assignment',array(
+        $command->delete('tbl_project_user_assignment', array(
             'user_id=:userId AND project_id=:projectId',
-            array(':userId'=>$userId,':projectId'=>$this->id),
+            array(':userId' => $userId, ':projectId' => $this->id),
         ));
     }
+
+    public function allowCurrentUser($role) {
+        $sql = "SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role";
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindValue(':projectId', $this->id, PDO::PARAM_INT);
+        $command->bindValue(':userId', Yii::app()->user->getId(), PDO::PARAM_INT);
+        $command->bindValue(':role', $role, PDO::PARAM_STR);
+        return $command->execute() == 1; // สะกด execute ผิด
+    }
+
+    public static function getUserRoleOptions() {
+        return CHtml::listData(Yii::app()->authManager->getRoles(), 'name', 'name');
+    }
+
+    public function isUserInProject($user) {
+        $sql = 'SELECT user_id FROM tbl_project_user_assignment WHERE project_id=:projectId AND user_id=:userId';
+        $command = Yii::app()->db->createCommand($sql);
+        $command->bindValue(":projectId", $this->id, PDO::PARAM_INT); // $command เมื่อจะใส่ค่า Properties ต้องใส่ '->' แต่เราไปใส่ '='
+        $command->bindValue(":userId", $user->id, PDO::PARAM_INT); // ต้องส่ง $user->id ไม่ใช่ $user อย่างเดียว
+        return $command->execute() == 1; // สะกด execute ผิด
+    }
+
 }

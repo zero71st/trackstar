@@ -122,6 +122,17 @@ class ProjectController extends Controller {
     }
 
     /**
+     * Performs the AJAX validation.
+     * @param Project $model the model to be validated
+     */
+    protected function performAjaxValidation($model) {
+        if (isset($_POST['ajax']) && $_POST['ajax'] === 'project-form') {
+            echo CActiveForm::validate($model);
+            Yii::app()->end();
+        }
+    }
+
+    /**
      * Returns the data model based on the primary key given in the GET variable.
      * If the data model is not found, an HTTP exception will be raised.
      * @param integer $id the ID of the model to be loaded
@@ -135,21 +146,10 @@ class ProjectController extends Controller {
         return $model;
     }
 
-    /**
-     * Performs the AJAX validation.
-     * @param Project $model the model to be validated
-     */
-    protected function performAjaxValidation($model) {
-        if (isset($_POST['ajax']) && $_POST['ajax'] === 'project-form') {
-            echo CActiveForm::validate($model);
-            Yii::app()->end();
-        }
-    }
-
     public function actionAdduser($id) {
         $project = $this->loadModel($id);
         if (!Yii::app()->user->checkAccess('createUser', array('project' => $project))) {
-            throw new CHttpException(403, "คุณไม่ได้รับอนูญาติให้ดำเนินการสิ่งนี้");
+            throw new CHttpException(403, "คุณไม่ได้รับอนูญาตให้ดำเนินการสิ่งนี้");
         }
         $form = new ProjectUserForm();
         if (isset($_POST['ProjectUserForm'])) {

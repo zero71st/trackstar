@@ -19,7 +19,7 @@ $this->menu = array(
 
 <h1> Add User to <?php echo $model->project->name; ?></h1>
 
-<?php if (Yii::app()->user->hasFlash('Success')): ?>
+<?php if (Yii::app()->user->hasFlash('success')): ?>
     <div class="successMessage">
         <?php echo Yii::app()->user->getFlash('success'); ?>
     </div>

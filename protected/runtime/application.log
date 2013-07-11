@@ -3271,3 +3271,281 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=issue/admin
 HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/create&pid=1
 ---
+2013/07/11 15:18:57 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'คุณไม่ได้รับอนูญาติให้ดำเนินการสิ่งนี้' in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php:152
+Stack trace:
+#0 [internal function]: ProjectController->actionAdduser('1')
+#1 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#2 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#13 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/view&id=1
+---
+2013/07/11 16:03:27 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:03:27 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('2')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+---
+2013/07/11 16:04:47 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:04:47 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('2')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+---
+2013/07/11 16:04:51 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:04:51 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('2')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+---
+2013/07/11 16:05:52 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:05:52 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('2')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+---
+2013/07/11 16:06:14 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:06:14 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='2' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('2')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+---
+2013/07/11 16:07:55 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:07:55 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('1')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/view&id=1
+---
+2013/07/11 16:10:56 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:10:56 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('1')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=1
+---
+2013/07/11 16:13:07 [error] [system.db.CDbCommand] CDbCommand::execute() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role.
+in C:\xampp\htdocs\trackstar\protected\models\Project.php (128)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (151)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/11 16:13:07 [error] [exception.CDbException] exception 'CDbException' with message 'CDbCommand failed to execute the SQL statement: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'project_id ='1' AND user_id='1' AND role='owner'' at line 1. The SQL statement executed was: SELECT * FROM tbl_project_user_assignment WEHRE project_id =:projectId AND user_id=:userId AND role=:role' in C:\xampp\htdocs\yiiroot\framework\db\CDbCommand.php:357
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\models\Project.php(128): CDbCommand->execute()
+#1 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149) : eval()'d code(1): Project->allowCurrentUser('owner')
+#2 C:\xampp\htdocs\yiiroot\framework\web\auth\CAuthManager.php(149): eval()
+#3 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(105): CAuthManager->executeBizRule('return isset($p...', Array, NULL)
+#4 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(115): CDbAuthManager->checkAccessRecursive('owner', '1', Array, Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\auth\CDbAuthManager.php(75): CDbAuthManager->checkAccessRecursive('createUser', '1', Array, Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\auth\CWebUser.php(806): CDbAuthManager->checkAccess('createUser', '1', Array)
+#7 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(151): CWebUser->checkAccess('createUser', Array)
+#8 [internal function]: ProjectController->actionAdduser('1')
+#9 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#16 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#17 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#18 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#19 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#20 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#21 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#22 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#23 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=1
+---

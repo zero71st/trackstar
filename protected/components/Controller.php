@@ -29,8 +29,8 @@ class Controller extends CController {
         return array(
         array('allow', // allow all user to perform 'index' and 'view' actions
               'controllers' => array('issue', 'project', 'user'),
-              'actions' => array('index', 'view','addUser'),
-              'users' => array('*'),
+              'actions' => array('index', 'view','adduser'),
+              'users' => array('@'),
         ),
         array('allow', // allow authenticate user to perform 'create' and 'update' actions
               'controllers' => array('issue', 'project', 'user'),

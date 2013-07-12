@@ -4,7 +4,7 @@
 
 $this->breadcrumbs=array(
 	'Projects'=>array('index'),
-	'Manage',
+	'จัดการรายการ',
 );
 
 $this->menu=array(

@@ -47,12 +47,12 @@
                 ?><!-- breadcrumbs -->
             <?php endif ?>
 
-            <?php echo $content; ?>
+            <?php echo $content; //View ต่าง ๆ จะถูกแสดงตรงส่วนนี้?> 
 
             <div class="clear"></div>
 
             <div id="footer">
-                Copyright &copy; <?php echo date('Y'); ?> by My Company.<br/>
+                Copyright &copy; <?php echo date('Y'); ?>TrackStar<br/>
                 All Rights Reserved.<br/>
                 <?php echo Yii::powered(); ?>
             </div><!-- footer -->

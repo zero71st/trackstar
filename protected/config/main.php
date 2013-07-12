@@ -4,9 +4,15 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
+
+
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
-    'name' => 'My Web Application',
+    // โครตหายากเลยหนังสือผิด
+    'homeUrl'=>array('project/index'), //homeUrl ให้ใส่ Controller ตามด้วย Action หาตั้งนาน
+    
+    'name' => 'TrackStar',
+    'id' => 'TrackStar',
     // preloading 'log' component
     'preload' => array('log'),
     // autoloading model and component classes
@@ -44,16 +50,14 @@ return array(
         'db' => array(
             'connectionString' => 'sqlite:' . dirname(__FILE__) . '/../data/testdrive.db',
         ),
-        
         // กำหนดให้ Authurization manager ให้เก็บใน Database
-        'authManager'=> array(
+        'authManager' => array(
             'class' => 'CDbAuthManager',
             'connectionID' => 'db',
-            'itemTable'=>'tbl_auth_item',
-            'itemChildTable'=>'tbl_auth_item_child',
-            'assignmentTable'=>'tbl_auth_assignment',
+            'itemTable' => 'tbl_auth_item',
+            'itemChildTable' => 'tbl_auth_item_child',
+            'assignmentTable' => 'tbl_auth_assignment',
         ),
-        
         // uncomment the following to use a MySQL database
         'db' => array(
             'connectionString' => 'mysql:host=localhost;dbname=db_trackstar',

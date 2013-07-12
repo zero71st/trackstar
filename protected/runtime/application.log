@@ -3549,3 +3549,57 @@ Stack trace:
 #23 {main}
 REQUEST_URI=/trackstar/index.php?r=project/adduser&id=1
 ---
+2013/07/12 08:52:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---
+2013/07/12 08:57:50 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/
+---
+2013/07/12 09:02:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---
+2013/07/12 09:49:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/
+---
+2013/07/12 09:50:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/index.php
+---
+2013/07/12 09:52:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "trackstar/index.php?r=project".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('trackstar/index...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=trackstar/index.php?r=project
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project
+---

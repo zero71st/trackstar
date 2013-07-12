@@ -4,7 +4,8 @@
 
 $this->breadcrumbs = array(
     'Projects' => array('index'),
-    $model->name,
+    $model->name,   
+    'อ่านอย่างเดียว',
 );
 
 $this->menu = array(

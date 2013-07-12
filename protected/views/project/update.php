@@ -5,7 +5,7 @@
 $this->breadcrumbs=array(
 	'Projects'=>array('index'),
 	$model->name=>array('view','id'=>$model->id),
-	'Update',
+	'แก้ไข',
 );
 
 $this->menu=array(

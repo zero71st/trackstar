@@ -18,6 +18,8 @@ return array(
     'import' => array(
         'application.models.*',
         'application.components.*',
+        // import all models of admin module to main application. so that we can create model from anywhere.
+        'application.modules.admin.models.*',
     ),
     'modules' => array(
         // uncomment the following to enable the Gii tool
@@ -28,6 +30,7 @@ return array(
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('127.0.0.1', '::1'),
         ),
+        // Register admin module to main application.
         'admin',
     ),
     // application components

@@ -1,7 +1,8 @@
 <?php
 
 class SiteController extends Controller {
-   // public $defaultAction ='login';
+
+    // public $defaultAction ='login';
     /**
      * Declares class-based actions.
      */
@@ -69,10 +70,13 @@ class SiteController extends Controller {
      * Displays the login page
      */
     public function actionLogin() {
-        if (!Yii::app()->user->isGuest){
+        // Trace ทำงานทุกครั้งที่เรียก Method นี้
+        Yii::Trace("The ActionLogin() method is being requested", "application.controllers.SiteController");
+
+        if (!Yii::app()->user->isGuest) {
             $this->redirect('Yii::app()->homeUrl');
         }
-        
+
         $model = new LoginForm;
 
         // if it is ajax validation request
@@ -85,10 +89,16 @@ class SiteController extends Controller {
         if (isset($_POST['LoginForm'])) {
             $model->attributes = $_POST['LoginForm'];
             // validate user input and redirect to the previous page if valid
-            if ($model->validate() && $model->login())
+            if ($model->validate() && $model->login()) {
+                // เก็บรายละเอียดการ Login สำเร็จใน File infoMessage.log ดูการ set route ที่ main.php
+                Yii::log("successfull login of user: " . Yii::app()->user->id, "info", "application.controllers.SiteController");
                 $this->redirect(Yii::app()->user->returnUrl);
+            } else {
+                // เก็บรายละเอียดการ Login Fail ใน Log แล้วแสดงผลที่ Browser ดูที่ set route ที่ main.php
+                Yii::log("Login ไม่ได้แล้วพยายามเข้า", "warning", "application.controllers.SiteController");
+            }
+            // display the login form
         }
-        // display the login form
         $this->render('login', array('model' => $model));
     }
 
@@ -98,6 +108,11 @@ class SiteController extends Controller {
     public function actionLogout() {
         Yii::app()->user->logout();
         $this->redirect(Yii::app()->homeUrl);
+    }
+
+    public function actionShowLog() {
+        echo "Logged Messages: <br> <br>";
+        CVarDumper::dump(Yii::getLogger()->getLogs());
     }
 
 }

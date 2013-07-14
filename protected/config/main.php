@@ -8,8 +8,7 @@
 return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     // โครตหายากเลยหนังสือผิด
-    'homeUrl'=>array('project/index'), //homeUrl ให้ใส่ Controller ตามด้วย Action หาตั้งนาน
-    
+    'homeUrl' => array('project/index'), //homeUrl ให้ใส่ Controller ตามด้วย Action หาตั้งนาน
     'name' => 'TrackStar',
     'id' => 'TrackStar',
     // preloading 'log' component
@@ -78,14 +77,18 @@ return array(
             'routes' => array(
                 array(
                     'class' => 'CFileLogRoute',
-                    'levels' => 'error, warning',
+                    'levels' => 'error',
                 ),
-            // uncomment the following to show log messages on web pages
-            /*
-              array(
-              'class'=>'CWebLogRoute',
-              ),
-             */
+                array(
+                    'class' => 'CFileLogRoute',
+                    'levels' => 'info,trace',
+                    'logFile'=> 'infoMessage.log',
+                ),
+                // uncomment the following to show log messages on web pages
+                array(
+                    'class' => 'CWebLogRoute',
+                    'levels' => 'warning',
+                ),
             ),
         ),
     ),

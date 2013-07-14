@@ -4156,3 +4156,300 @@ Stack trace:
 #3 {main}
 REQUEST_URI=/trackstar/index.php?r=admin/project
 ---
+2013/07/14 11:40:30 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:30 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:31 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:31 [trace] [application.controllers.SiteController] The ActionLogin() method is being requested
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:31 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:31 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\protected\views\site\index.php (9)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\protected\views\site\index.php (9)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (2)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "authManager" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_assignment`
+WHERE userid=:userid
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_item`
+WHERE name=:name
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.web.auth.CDbAuthManager] Checking permission "admin"
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.db.CDbCommand] Querying SQL: SELECT `parent`
+FROM `tbl_auth_item_child`
+WHERE child=:name
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (58)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+2013/07/14 11:40:36 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (31)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [application.controllers.SiteController] The ActionLogin() method is being requested
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:40:38 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [application.controllers.SiteController] The ActionLogin() method is being requested
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\trackstar\protected\views\site\login.php (23)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\trackstar\protected\views\site\login.php (30)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\trackstar\protected\views\site\login.php (52)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "authManager" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_assignment`
+WHERE userid=:userid
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_item`
+WHERE name=:name
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.web.auth.CDbAuthManager] Checking permission "admin"
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.db.CDbCommand] Querying SQL: SELECT `parent`
+FROM `tbl_auth_item_child`
+WHERE child=:name
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column1.php (6)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+2013/07/14 11:44:52 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (102)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [application.controllers.SiteController] The ActionLogin() method is being requested
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (74)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (76)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\trackstar\protected\models\User.php (32)
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+2013/07/14 11:44:58 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\trackstar\protected\models\User.php (32)
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_user`
+in C:\xampp\htdocs\trackstar\protected\models\User.php (32)
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_user`
+in C:\xampp\htdocs\trackstar\protected\models\User.php (32)
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] User.find()
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (92)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_user` `t` WHERE LOWER(username)=? LIMIT 1
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (35)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (92)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] User.saveAttributes()
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (47)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (92)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] User.updateByPk()
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (47)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (92)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Executing SQL: UPDATE `tbl_user` SET `last_login_time`=:yp0 WHERE `tbl_user`.`id`=1
+in C:\xampp\htdocs\trackstar\protected\components\UserIdentity.php (47)
+in C:\xampp\htdocs\trackstar\protected\models\LoginForm.php (47)
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (92)
+2013/07/14 11:44:58 [info] [application.controllers.SiteController] successfull login of user: 1
+in C:\xampp\htdocs\trackstar\protected\controllers\SiteController.php (94)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "log" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "request" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "urlManager" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.web.filters.CFilterChain] Running filter ProjectController.filteraccessControl()
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "user" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "session" application component
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "db" application component
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (104)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbConnection] Opening DB connection
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (104)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_project`
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (104)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_project`
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (104)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `tbl_sys_message`
+in C:\xampp\htdocs\trackstar\protected\modules\admin\models\SysMessage.php (27)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (106)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `tbl_sys_message`
+in C:\xampp\htdocs\trackstar\protected\modules\admin\models\SysMessage.php (27)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (106)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] SysMessage.find()
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (108)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_sys_message` `t` ORDER BY t.update_time DESC LIMIT 1
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (108)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "clientScript" application component
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (21)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "widgetFactory" application component
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] Project.count()
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT COUNT(*) FROM `tbl_project` `t`
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.ar.CActiveRecord] Project.findAll()
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `tbl_project` `t` LIMIT 10
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "assetManager" application component
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "coreMessages" application component
+in C:\xampp\htdocs\trackstar\protected\views\project\index.php (32)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+in C:\xampp\htdocs\trackstar\index.php (13)
+2013/07/14 11:44:58 [trace] [system.CModule] Loading "authManager" application component
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_assignment`
+WHERE userid=:userid
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+2013/07/14 11:44:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT *
+FROM `tbl_auth_item`
+WHERE name=:name
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)
+2013/07/14 11:44:58 [trace] [system.web.auth.CDbAuthManager] Checking permission "admin"
+in C:\xampp\htdocs\trackstar\protected\views\layouts\main.php (36)
+in C:\xampp\htdocs\trackstar\protected\views\layouts\column2.php (22)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (118)

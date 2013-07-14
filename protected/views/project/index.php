@@ -20,7 +20,6 @@ $this->menu = array(
     <?php
     Yii::app()->clientScript->registerScript(
             'fadeAndHideEffect', '$(".sys-message").animate({opacity: 1.0}, 5000).fadeOut("slow");');
-
     endif;
 ?>
 

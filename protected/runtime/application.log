@@ -4718,3 +4718,124 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=issue/index
 HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=1
 ---
+2013/07/15 13:49:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sysMessage".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('sysMessage')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=sysMessage
+---
+2013/07/15 13:50:01 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "sysmessage".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('sysmessage')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=sysmessage
+---
+2013/07/15 13:50:22 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/default/index".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/def...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=admin/admin/default/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=admin
+---
+2013/07/15 13:50:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "admin/admin/sysMessage".' in C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php:286
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('admin/admin/sys...')
+#1 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#2 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/trackstar/index.php?r=admin/admin/sysMessage
+---
+2013/07/15 14:56:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ไม่พบโครงการที่ระบุ' in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php:156
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(31): ProjectController->loadModel('99')
+#1 [internal function]: ProjectController->actionView('99')
+#2 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#3 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view')
+#14 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view&id=99
+---
+2013/07/15 15:00:03 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'ไม่พบโครงการที่คุณระบุ' in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php:156
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(31): ProjectController->loadModel('99')
+#1 [internal function]: ProjectController->actionView('99')
+#2 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#3 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#11 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#13 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/view')
+#14 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#15 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/trackstar/index.php?r=project/view&id=99
+---
+2013/07/15 15:14:34 [error] [exception.CHttpException.403] exception 'CHttpException' with message 'คุณไม่ได้รับอนุญาตให้ดำเนินการสิ่งนี้' in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php:163
+Stack trace:
+#0 [internal function]: ProjectController->actionAdduser('2')
+#1 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(ProjectController), Array)
+#2 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(ProjectController), Object(ReflectionMethod), Array)
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('adduser')
+#12 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('project/adduser')
+#13 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#14 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=2
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/view&id=2
+---
+2013/07/15 16:37:21 [error] [php] Missing argument 1 for CModel::getError(), called in C:\xampp\htdocs\trackstar\protected\views\project\adduser.php on line 30 and defined (C:\xampp\htdocs\yiiroot\framework\base\CModel.php:370)
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): ProjectController->renderInternal()
+#1 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): ProjectController->renderFile()
+#2 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): ProjectController->renderPartial()
+#3 C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php(179): ProjectController->render()
+#4 unknown(0): ProjectController->actionAdduser()
+#5 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#6 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams()
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): ProjectController->runAction()
+#9 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#10 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): ProjectController->filterAccessControl()
+#12 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#14 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): ProjectController->runActionWithFilters()
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): ProjectController->run()
+#16 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#17 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#18 C:\xampp\htdocs\trackstar\index.php(13): CWebApplication->run()
+REQUEST_URI=/trackstar/index.php?r=project/adduser&id=4
+in C:\xampp\htdocs\trackstar\protected\views\project\adduser.php (30)
+in C:\xampp\htdocs\trackstar\protected\controllers\ProjectController.php (179)
+in C:\xampp\htdocs\trackstar\index.php (13)

@@ -54,7 +54,7 @@ class ProjectUserForm extends CFormModel {
         if (!$this->hasErrors()) {  // we only want to authenticate when no other input errors are present
             $user = User::model()->findByAttributes(array('username' => $this->username));
             if ($this->project->isUserInProject($user)) {
-                $this->addError('username', 'User ถูกเพิ่มในโปรเจ็คแล้ว');
+                $this->addError('username', $user->username.' ถูกเพิ่มในโปรเจ็คแล้ว');
             } else {
                 $this->_user = $user;
             }
@@ -73,7 +73,7 @@ class ProjectUserForm extends CFormModel {
             }
             return true;
         } else {
-            $this->addError('username', 'Error when attempting to assign this user to the project.');
+            $this->addError('username', 'มีความผิดพลาดกับผู้ใช้รายนี้เมื่อพยายาม Assign ในโครงการนี้');
             return false;
         }
     }

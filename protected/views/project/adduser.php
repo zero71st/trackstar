@@ -23,7 +23,13 @@ $this->menu = array(
     <div class="successMessage">
         <?php echo Yii::app()->user->getFlash('success'); ?>
     </div>
-<?php endif ?>
+<?php endif; ?> <!--ลืมใส่ semi-colon-->
+
+<?php if($model->hasErrors()): ?>
+    <div class="errorMessage">
+        <?php echo $model->getError('username'); ?>
+    </div>
+<?php endif; ?>
 
 <div class="form">
     <?php $form = $this->beginWidget('CActiveForm'); ?>

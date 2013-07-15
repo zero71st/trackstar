@@ -153,14 +153,14 @@ class ProjectController extends Controller {
     public function loadModel($id) {
         $model = Project::model()->findByPk($id);
         if ($model === null)
-            throw new CHttpException(404, 'The requested page does not exist.');
+            throw new CHttpException(404, "ไม่พบโครงการที่คุณระบุ");
         return $model;
     }
 
     public function actionAdduser($id) {
         $project = $this->loadModel($id);
         if (!Yii::app()->user->checkAccess('createUser', array('project' => $project))) {
-            throw new CHttpException(403, "คุณไม่ได้รับอนูญาตให้ดำเนินการสิ่งนี้");
+            throw new CHttpException(403, "คุณไม่ได้รับอนุญาตให้ดำเนินการสิ่งนี้");
         }
         $form = new ProjectUserForm();
         if (isset($_POST['ProjectUserForm'])) {

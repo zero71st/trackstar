@@ -237,3 +237,24 @@ div.sys-message
     color:#FF330A;
     border-color:#00849E;
 }
+
+/*div.successMessage
+{
+    padding:.8em;
+    margin-bottom:1em;
+    border:3px solid #ddd;
+    background:#4AEE6B;
+    color:#FF330A;
+    border-color:#00849E;
+}*/
+
+
+/*div.errorMessage
+{
+    padding:.8em;
+    margin-bottom:1em;
+    border:3px solid #ddd;
+    background:#B91C1C;
+    color:#EEE84A;
+    border-color:#00849E;
+}*/

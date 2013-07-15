@@ -177,7 +177,7 @@ class IssueController extends Controller {
         return $this->_project;
     }
 
-    protected  function createComment($issue) {
+    protected function createComment($issue) {
         $comment = new Comment();
         //สะกด $_POST() ผิดเป็น $POST_() ไง่จริง ๆ
         if (isset($_POST['Comment'])) {

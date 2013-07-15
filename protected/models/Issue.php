@@ -80,6 +80,8 @@ class Issue extends TrackStarActiveRecord {
             'requester' => array(self::BELONGS_TO, 'User', 'requester_id'),
             'owner' => array(self::BELONGS_TO, 'User', 'owner_id'),
             'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
+            'comments'=>array(self::HAS_MANY,'Comment','issue_id'), // สร้าง Model Comment แล้วเชื่อมความสัมพันธ์จาก Issue ไปที่ Comment แบบ One to meny
+            'commentCount'=>array(self::STAT,'Comment','issue_id'), // เชื่อมความสัมพันธ์ไปที่ Comment model นับจำนวนของ Comment
         );
     }
 

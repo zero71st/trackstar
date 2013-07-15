@@ -125,7 +125,7 @@ class Project extends TrackStarActiveRecord {
         $command->bindValue(':projectId', $this->id, PDO::PARAM_INT);
         $command->bindValue(':userId', Yii::app()->user->getId(), PDO::PARAM_INT);
         $command->bindValue(':role', $role, PDO::PARAM_STR);
-        return $command->execute() == 1 ? true:false; // สะกด execute ผิด
+        return $command->execute() == 1 ? true : false; // สะกด execute ผิด
     }
 
     public static function getUserRoleOptions() {

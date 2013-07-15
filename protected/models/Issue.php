@@ -64,7 +64,6 @@ class Issue extends TrackStarActiveRecord {
             // The following rule is used by search().
             // Please remove those attributes that should not be searched.
             array('id, name, description, project_id, type_id, status_id, owner_id, requester_id, create_time, create_user_id, update_time, udpate_user_id', 'safe', 'on' => 'search'),
-            
             // สร้างใหม่เพื่อ Validate ค่าที่ป้อนเพราะอะไรไม่รู้
             array('type_id', 'in', 'range' => self::getAllowedTypeRange())
         );
@@ -80,8 +79,8 @@ class Issue extends TrackStarActiveRecord {
             'requester' => array(self::BELONGS_TO, 'User', 'requester_id'),
             'owner' => array(self::BELONGS_TO, 'User', 'owner_id'),
             'project' => array(self::BELONGS_TO, 'Project', 'project_id'),
-            'comments'=>array(self::HAS_MANY,'Comment','issue_id'), // สร้าง Model Comment แล้วเชื่อมความสัมพันธ์จาก Issue ไปที่ Comment แบบ One to meny
-            'commentCount'=>array(self::STAT,'Comment','issue_id'), // เชื่อมความสัมพันธ์ไปที่ Comment model นับจำนวนของ Comment
+            'comments' => array(self::HAS_MANY, 'Comment', 'issue_id'), // สร้าง Model Comment แล้วเชื่อมความสัมพันธ์จาก Issue ไปที่ Comment แบบ One to meny
+            'commentCount' => array(self::STAT, 'Comment', 'issue_id'), // เชื่อมความสัมพันธ์ไปที่ Comment model นับจำนวนของ Comment
         );
     }
 
@@ -173,6 +172,12 @@ class Issue extends TrackStarActiveRecord {
     public function getTypeText() {
         $typeOptions = $this->typeOptions;
         return isset($typeOptions[$this->type_id]) ? $typeOptions[$this->type_id] : "ไม่พบประเภทปัญหาที่ระบุ({$this->type_id})";
+    }
+
+    public function addComment($comment) {
+        $comment->issue_id = $this->id;
+       // Yii::log("Create Success", "warning", "application.controllers.IssueController");
+        return $comment->save();
     }
 
 }

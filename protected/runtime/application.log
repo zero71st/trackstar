@@ -4552,3 +4552,169 @@ Stack trace:
 REQUEST_URI=/trackstar/index.php?r=comment/admin
 HTTP_REFERER=http://localhost/trackstar/index.php?r=comment/index
 ---
+2013/07/15 10:28:33 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:164
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2013/07/15 10:28:42 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "createComment".' in C:\xampp\htdocs\yiiroot\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(225): CComponent->__call('createComment', Array)
+#1 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(35): CActiveRecord->__call('createComment', Array)
+#2 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(35): Issue->createComment(Object(Issue))
+#3 [internal function]: IssueController->actionView('1')
+#4 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/view')
+#16 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/view&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=project/view&id=1
+---
+2013/07/15 10:33:31 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:164
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2013/07/15 11:10:06 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:164
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue
+---
+2013/07/15 11:12:50 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "createComment".' in C:\xampp\htdocs\yiiroot\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(225): CComponent->__call('createComment', Array)
+#1 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(34): CActiveRecord->__call('createComment', Array)
+#2 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(34): Issue->createComment(Object(Issue))
+#3 [internal function]: IssueController->actionView('1')
+#4 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/view')
+#16 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/view&id=1
+---
+2013/07/15 11:13:49 [error] [exception.CException] exception 'CException' with message 'Issue and its behaviors do not have a method or closure named "createComment".' in C:\xampp\htdocs\yiiroot\framework\base\CComponent.php:265
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\db\ar\CActiveRecord.php(225): CComponent->__call('createComment', Array)
+#1 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(34): CActiveRecord->__call('createComment', Array)
+#2 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(34): Issue->createComment(Object(Issue))
+#3 [internal function]: IssueController->actionView('1')
+#4 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#5 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#13 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#15 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/view')
+#16 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#17 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/view&id=1
+---
+2013/07/15 11:32:29 [error] [exception.CException] exception 'CException' with message 'IssueController cannot find the requested view "_comments".' in C:\xampp\htdocs\yiiroot\framework\web\CController.php:878
+Stack trace:
+#0 C:\xampp\htdocs\trackstar\protected\views\issue\view.php(54): CController->renderPartial('_comments', Array)
+#1 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(126): require('C:\xampp\htdocs...')
+#2 C:\xampp\htdocs\yiiroot\framework\web\CBaseController.php(95): CBaseController->renderInternal('C:\xampp\htdocs...', Array, true)
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(869): CBaseController->renderFile('C:\xampp\htdocs...', Array, true)
+#4 C:\xampp\htdocs\yiiroot\framework\web\CController.php(782): CController->renderPartial('view', Array, true)
+#5 C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php(39): CController->render('view', Array)
+#6 [internal function]: IssueController->actionView('1')
+#7 C:\xampp\htdocs\yiiroot\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(IssueController), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(IssueController), Object(ReflectionMethod), Array)
+#9 C:\xampp\htdocs\yiiroot\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#16 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('view')
+#18 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/view')
+#19 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#20 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/view&id=1
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=1
+---
+2013/07/15 11:39:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'กรุณาระบุโครงการที่ต้องการก่อน!' in C:\xampp\htdocs\trackstar\protected\controllers\IssueController.php:163
+Stack trace:
+#0 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): IssueController->filterProjectContext(Object(CFilterChain))
+#1 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#2 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 C:\xampp\htdocs\yiiroot\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 C:\xampp\htdocs\yiiroot\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 C:\xampp\htdocs\yiiroot\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 C:\xampp\htdocs\yiiroot\framework\web\CController.php(291): CFilterChain->run()
+#7 C:\xampp\htdocs\yiiroot\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(282): CController->run('index')
+#9 C:\xampp\htdocs\yiiroot\framework\web\CWebApplication.php(141): CWebApplication->runController('issue/index')
+#10 C:\xampp\htdocs\yiiroot\framework\base\CApplication.php(169): CWebApplication->processRequest()
+#11 C:\xampp\htdocs\trackstar\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/trackstar/index.php?r=issue/index
+HTTP_REFERER=http://localhost/trackstar/index.php?r=issue/view&id=1
+---

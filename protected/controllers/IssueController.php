@@ -29,10 +29,13 @@ class IssueController extends Controller {
      * This method is used by the 'accessControl' filter.
      * @return array access control rules
      */
-    
     public function actionView($id) {
+        $issue = $this->loadModel($id);
+        $comment = $this->createComment($issue);
+
         $this->render('view', array(
             'model' => $this->loadModel($id),
+            'comment' => $comment,
         ));
     }
 
@@ -118,9 +121,9 @@ class IssueController extends Controller {
         $model->unsetAttributes();  // clear any default values
         if (isset($_GET['Issue']))
             $model->attributes = $_GET['Issue'];
-        
-        $model->project_id=$this->_project->id;
-        
+
+        $model->project_id = $this->_project->id;
+
         $this->render('admin', array(
             'model' => $model,
         ));
@@ -172,6 +175,19 @@ class IssueController extends Controller {
             throw new CHttpException(403, 'ไม่พบโครงการที่คุณเลือก');
         }
         return $this->_project;
+    }
+
+    protected  function createComment($issue) {
+        $comment = new Comment();
+        //สะกด $_POST() ผิดเป็น $POST_() ไง่จริง ๆ
+        if (isset($_POST['Comment'])) {
+            $comment->attributes = $_POST['Comment'];
+            if ($issue->addComment($comment)) {
+                Yii::app()->user->setFlash('commentSubmitted', "คุณได้เพิ่มคอมเม้นท์เรียบร้อยแล้ว!");
+                $this->refresh();
+            }
+        }
+        return $comment;
     }
 
 }

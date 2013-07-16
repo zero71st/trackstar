@@ -178,6 +178,6 @@ class ProjectController extends Controller {
         $form->project = $project;
         $this->render('adduser', array('model' => $form,));
     }
-
+    
 }
 

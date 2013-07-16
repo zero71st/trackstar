@@ -92,7 +92,7 @@ class SiteController extends Controller {
             if ($model->validate() && $model->login()) {
                 // เก็บรายละเอียดการ Login สำเร็จใน File infoMessage.log ดูการ set route ที่ main.php
                 Yii::log("successfull login of user: " . Yii::app()->user->id, "info", "application.controllers.SiteController");
-                $this->redirect(Yii::app()->user->returnUrl);
+                 $this->redirect(Yii::app()->user->returnUrl);
             } else {
                 // เก็บรายละเอียดการ Login Fail ใน Log แล้วแสดงผลที่ Browser ดูที่ set route ที่ main.php
                 Yii::log("Login ไม่ได้แล้วพยายามเข้า", "warning", "application.controllers.SiteController");

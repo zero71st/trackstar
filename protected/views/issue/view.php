@@ -48,16 +48,18 @@ $this->widget('zii.widgets.CDetailView', array(
 
 <div id="comments">
     <?php if ($model->commentCount >= 1): ?>
+        <br>
+        <hr>
         <h3>
-            <?php echo $model->commentCount > 1 ? $model->commentCount . 'comments' : 'One comment'; ?>
+            <?php echo $model->commentCount > 1 ? $model->commentCount . ' comments' : 'One comment'; ?> <!--แสดงจำนวน Comments-->
         </h3>
-        <?php $this->renderPartial('_comments', array('comments' => $model->comments,)); ?>
+        <?php $this->renderPartial('_comments', array('comments' => $model->comments,)); ?> <!--Render หน้า Comment-->
     <?php endif; ?>
-
+    <br>
     <h3> Leave Comment</h3>
     <?php if (Yii::app()->user->hasFlash('commentSubmitted')): ?>
         <div class="flash-success">
-            <?php echo Yii::app()->user->getFlash('commentSubmitted');// ลืม Echo อีกแล้วไง่อีกแล้ว ?>  
+            <?php echo Yii::app()->user->getFlash('commentSubmitted'); // ลืม Echo อีกแล้วไง่อีกแล้ว ?>  
         </div>
     <?php else: ?>
         <?php $this->renderPartial('/comment/_form', array('model' => $comment,)); ?>

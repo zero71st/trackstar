@@ -31,3 +31,6 @@ $this->widget('zii.widgets.CListView', array(
     'itemView' => '_view',
 ));
 ?>
+
+<!--Display Comment widget-->
+<?php $this->widget('RecentCommentsWidget'); ?>

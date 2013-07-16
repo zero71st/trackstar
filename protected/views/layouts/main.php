@@ -53,7 +53,7 @@
             <div class="clear"></div>
 
             <div id="footer">
-                Copyright &copy; <?php echo date('Y'); ?>TrackStar<br/>
+                Copyright &copy; <?php echo date('Y'); ?> TrackStar <br/>
                 All Rights Reserved.<br/>
                 <?php echo Yii::powered(); ?>
             </div><!-- footer -->

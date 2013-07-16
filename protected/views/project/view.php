@@ -4,7 +4,7 @@
 
 $this->breadcrumbs = array(
     'Projects' => array('index'),
-    $model->name,   
+    $model->name,
     'อ่านอย่างเดียว',
 );
 
@@ -15,8 +15,7 @@ $this->menu = array(
     array('label' => 'Delete Project', 'url' => '#', 'linkOptions' => array('submit' => array('delete', 'id' => $model->id), 'confirm' => 'Are you sure you want to delete this item?')),
     array('label' => 'Manage Project', 'url' => array('admin')),
     array('label' => 'Create Issue', 'url' => array('issue/create', 'pid' => $model->id)),
-    array('label' => 'Add user to Project','url'=>array('project/adduser','id'=>$model->id)),
-    
+    array('label' => 'Add user to Project', 'url' => array('project/adduser', 'id' => $model->id)),
 );
 ?>
 
@@ -45,4 +44,10 @@ $this->widget('zii.widgets.CListView', array(
     'dataProvider' => $issueDataProvider,
     'itemView' => '/issue/_view',
 ));
+?>
+
+<?php
+    $this->beginWidget('zii.widgets.CPortlet', array('title' => 'Recent comments on this project'));
+        $this->widget('RecentCommentsWidget', array('projectId' => $model->id));
+    $this->endWidget();
 ?>

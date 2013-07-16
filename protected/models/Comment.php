@@ -103,7 +103,7 @@ class Comment extends TrackStarActiveRecord {
     }
 
     // Retrieve coment from Db
-    public function recent($limit) {
+    public function recent($limit=5) {
         $this->getDbCriteria()->mergeWith(array('order' => 't.create_time DESC', 'limit' => $limit));
         return $this;
     }

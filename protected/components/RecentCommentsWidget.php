@@ -21,7 +21,7 @@ class RecentCommentsWidget extends CWidget {
     public function init() {
         if (null !== $this->projectId)
         // eager loading
-            $this->_comments = Comment::model()->with(array('issue' => array('condition' => 'project_id=' . $this->projectId)))->recent()->$this->displayLimit->findAll();
+            $this->_comments = Comment::model()->with(array('issue' => array('condition' => 'project_id='.$this->projectId)))->recent($this->displayLimit)->findAll();
         else
         // lazy loading
             $this->_comments = Comment::model()->recent($this->displayLimit)->findAll();

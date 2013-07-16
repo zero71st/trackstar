@@ -20,7 +20,7 @@ $this->menu = array(
     <?php
     Yii::app()->clientScript->registerScript(
             'fadeAndHideEffect', '$(".sys-message").animate({opacity: 1.0}, 5000).fadeOut("slow");');
-    endif;
+endif;
 ?>
 
 <h1>Projects</h1>
@@ -33,4 +33,6 @@ $this->widget('zii.widgets.CListView', array(
 ?>
 
 <!--Display Comment widget-->
-<?php $this->widget('RecentCommentsWidget'); ?>
+<?php $this->beginWidget('zii.widgets.CPortlet', array('title' => "Recent Comment")); ?>
+    <?php $this->widget('RecentCommentsWidget'); ?>
+<?php $this->endWidget(); ?>
